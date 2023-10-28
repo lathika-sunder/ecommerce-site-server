@@ -1,1 +1,62 @@
-[{"id":"9","name":"Orange","price":3,"price_in_inr":3,"description":"Sweet and tangy orange","rating":4.6,"quantity":45,"quantity_unit":"kg","category":"Fruits","image":"https://purepng.com/public/uploads/large/purepng.com-orange-orangeorangefruitbitter-orangeorangesclip-art-17015273374288pjtg.png"},{"id":"3","name":"Carrot","price":180,"price_in_inr":180,"description":"Sweet and crunchy carrot","rating":4.1,"quantity":40,"quantity_unit":"kg","category":"Vegetables","image":"https://pngimg.com/d/carrot_PNG4984.png"},{"id":"3","name":"Carrot","price":180,"price_in_inr":180,"description":"Sweet and crunchy carrot","rating":4.1,"quantity":40,"quantity_unit":"kg","category":"Vegetables","image":"https://pngimg.com/d/carrot_PNG4984.png"}]
+[
+  {
+   
+    "name": "Orange",
+    "price": 3,
+    "price_in_inr": 3,
+    "description": "Sweet and tangy orange",
+    "rating": 4.6,
+    "quantity": 45,
+    "quantity_unit": "kg",
+    "category": "Fruits",
+    "image": "https://purepng.com/public/uploads/large/purepng.com-orange-orangeorangefruitbitter-orangeorangesclip-art-17015273374288pjtg.png"
+  },
+  {
+    
+    "name": "Carrot",
+    "price": 180,
+    "price_in_inr": 180,
+    "description": "Sweet and crunchy carrot",
+    "rating": 4.1,
+    "quantity": 40,
+    "quantity_unit": "kg",
+    "category": "Vegetables",
+    "image": "https://pngimg.com/d/carrot_PNG4984.png"
+  },
+  {
+    ,
+    "name": "Carrot",
+    "price": 180,
+    "price_in_inr": 180,
+    "description": "Sweet and crunchy carrot",
+    "rating": 4.1,
+    "quantity": 40,
+    "quantity_unit": "kg",
+    "category": "Vegetables",
+    "image": "https://pngimg.com/d/carrot_PNG4984.png"
+  },
+  {
+    
+    "name": "Banana",
+    "price": 12,
+    "price_in_inr": 12,
+    "description": "Ripe and delicious banana",
+    "rating": 4.2,
+    "quantity": 70,
+    "quantity_unit": "kg",
+    "category": "Fruits",
+    "image": "https://png.pngtree.com/png-clipart/20220716/ourmid/pngtree-banana-yellow-fruit-banana-skewers-png-image_5944324.png"
+  },
+  {
+    
+    "name": "Banana",
+    "price": 12,
+    "price_in_inr": 12,
+    "description": "Ripe and delicious banana",
+    "rating": 4.2,
+    "quantity": 70,
+    "quantity_unit": "kg",
+    "category": "Fruits",
+    "image": "https://png.pngtree.com/png-clipart/20220716/ourmid/pngtree-banana-yellow-fruit-banana-skewers-png-image_5944324.png"
+  }
+]
