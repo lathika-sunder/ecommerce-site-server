@@ -1,33 +1,40 @@
-const { client } = require('../db/db');
-const Cart=require("../models/cartModel")
-function getCartProducts(callback) {
-  
-  const db = client.db('products'); 
-  const collection = db.collection('cart-products'); 
+const CartProduct = require('../models/cartModel');
 
-  collection.find({}).toArray((err, cartProducts) => {
-    if (err) {
-      callback(err, null);
-    } else {
-      callback(null, cartProducts); // Corrected line: Return cartProducts instead of products
-    }
-  });
+async function getCartProducts() {
+  try {
+    const cartProducts = await CartProduct.find({});
+    return cartProducts;
+  } catch (error) {
+    throw error;
+  }
 }
 
-function addCartProduct(newCartProduct, callback) {
-  const db = client.db('products'); // Replace 'yourdbname' with your database name
-  const collection = db.collection('cart-products'); // Assuming your collection name is 'products'
-
-  collection.insertOne(newCartProduct, (err, result) => {
-    if (err) {
-      callback(err);
-    } else {
-      callback(null);
-    }
-  });
+async function addCartProduct(newProduct) {
+  try {
+    const cartProduct = new CartProduct(newCartProduct);
+    await cartProduct.save();
+  } catch (error) {
+    throw error;
+  }
 }
+// cartController.js
+
+// cartController.js
+
+// cartController.js
+
+const removeFromCart = async (itemId) => {
+  try {
+    const removedItem = await CartProduct.findByIdAndRemove(itemId);
+    return removedItem;
+  } catch (error) {
+    // Handle errors here
+    throw new Error("Error removing item from cart: " + error.message);
+  }
+};
 
 module.exports = {
   getCartProducts,
   addCartProduct,
+  removeFromCart,
 };

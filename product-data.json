@@ -1,6 +1,5 @@
 [
   {
-    "id": "1",
     "name": "Apple",
     "price": 200.5,
     "price_in_inr": 200.5,
@@ -12,7 +11,7 @@
     "image": "https://www.freeiconspng.com/uploads/download-apples-png-image-red-apple-fruit-10.png"
   },
   {
-    "id": "2",
+    
     "name": "Banana",
     "price": 12,
     "price_in_inr": 12,
@@ -24,7 +23,7 @@
     "image": "https://png.pngtree.com/png-clipart/20220716/ourmid/pngtree-banana-yellow-fruit-banana-skewers-png-image_5944324.png"
   },
   {
-    "id": "3",
+    
     "name": "Carrot",
     "price": 180,
     "price_in_inr": 180,
@@ -36,7 +35,7 @@
     "image": "https://pngimg.com/d/carrot_PNG4984.png"
   },
   {
-    "id": "4",
+    
     "name": "Spinach",
     "price": 20,
     "price_in_inr": 20,
@@ -48,7 +47,7 @@
     "image": "https://pngimg.com/d/spinach_PNG42.png"
   },
   {
-    "id": "5",
+    
     "name": "Milk",
     "price": 1.5,
     "price_in_inr": 1.5,
@@ -60,7 +59,7 @@
     "image": "https://i.pinimg.com/originals/2a/63/fe/2a63fec9446820c83dad300b0ffb7855.png"
   },
   {
-    "id": "6",
+   
     "name": "Cheese",
     "price": 3,
     "price_in_inr": 3,
@@ -72,7 +71,7 @@
     "image": "https://www.picng.com/upload/butter/png_butter_10866.png"
   },
   {
-    "id": "7",
+    
     "name": "Chicken Breast",
     "price": 5,
     "price_in_inr": 5,
@@ -84,7 +83,7 @@
     "image": "https://www.seekpng.com/png/detail/120-1207813_boneless-chicken-breast.png"
   },
   {
-    "id": "8",
+   
     "name": "Beef Steak",
     "price": 8,
     "price_in_inr": 8,
@@ -96,7 +95,7 @@
     "image": "https://static.vecteezy.com/system/resources/previews/023/960/830/original/raw-beef-steak-free-png.png"
   },
   {
-    "id": "9",
+    
     "name": "Orange",
     "price": 3,
     "price_in_inr": 3,
@@ -108,7 +107,7 @@
     "image": "https://purepng.com/public/uploads/large/purepng.com-orange-orangeorangefruitbitter-orangeorangesclip-art-17015273374288pjtg.png"
   },
   {
-    "id": "10",
+    
     "name": "Banana",
     "price": 12,
     "price_in_inr": 12,
@@ -121,7 +120,7 @@
     "cartQuantity": null
   },
   {
-    "id": "5",
+    
     "name": "VIGNESH.Cli",
     "price": "64",
     "price_in_inr": "88",
@@ -133,7 +132,7 @@
     "image": "https://cdn.zeptonow.com/production///tr:w-450,ar-753-708,pr-true,f-webp,q-80/inventory/product/71d8c8dd-d586-447e-8c65-74c952415178-/tmp/20230915-1249361.jpeg"
   },
   {
-    "id": "700",
+    
     "name": "nnn",
     "price": "10",
     "price_in_inr": "077",
@@ -145,7 +144,7 @@
     "image": "https://cdn.zeptonow.com/production///tr:w-450,ar-753-708,pr-true,f-webp,q-80/inventory/product/71d8c8dd-d586-447e-8c65-74c952415178-/tmp/20230915-1249361.jpeg"
   },
   {
-    "id": "5",
+    
     "name": "VIGNESH.C",
     "price": "86",
     "price_in_inr": "86",

@@ -1,12 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const categoriesModel = require("../models/categoriesModel");
+const categoriesController = require("../controllers/categoriesController");
 const productsController = require("../controllers/productController");
 const cartController = require("../controllers/cartController");
 const Product = require("../models/productsModel");
+const CartProduct = require("../models/cartModel");
 
 router.get("/categories", (req, res) => {
-  categoriesModel.getCategories((err, categories) => {
+  categoriesController.getCategories((err, categories) => {
     if (err) {
       res.status(500).send("Error reading data from file");
     } else {
@@ -15,14 +16,17 @@ router.get("/categories", (req, res) => {
   });
 });
 
-router.get("/products", (req, res) => {
-  productsController.getProducts((err, products) => {
-    if (err) {
-      res.status(500).send("Error reading data from file");
-    } else {
+// Define a route to fetch data from MongoDB
+router.get('/products', async (req, res) => {
+  try {
+      // Fetch products from the MongoDB database
+      const products = await Product.find();
+      // Send the products as JSON response
       res.json(products);
-    }
-  });
+  } catch (error) {
+      // Handle errors, e.g., send an error response
+      res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
 router.post("/products", async (req, res) => {
@@ -30,7 +34,6 @@ router.post("/products", async (req, res) => {
     const {
       name,
       price,
-      price_in_inr,
       description,
       rating,
       quantity,
@@ -41,7 +44,6 @@ router.post("/products", async (req, res) => {
     const newProduct = new Product({
       name,
       price,
-      price_in_inr,
       description,
       rating,
       quantity,
@@ -57,8 +59,50 @@ router.post("/products", async (req, res) => {
   }
 });
 
-router.get("/cart-products", cartController.getCartProducts);
-router.post("/cart-products", cartController.addCartProduct);
+router.post("/cart-products", async (req, res) => {
+  try {
+    const {
+      name,
+      price,
+      description,
+      rating,
+      quantity,
+      quantity_unit,
+      category,
+      image,
+    } = req.body;
+    const newCartProduct = new CartProduct({
+      name,
+      price,
+      description,
+      rating,
+      quantity,
+      quantity_unit,
+      category,
+      image,
+    });
+    const savedCartProduct = newCartProduct.save();
+    res.status(201).json(savedCartProduct);
+  } catch (error) {
+    console.error("Error saving product to cart:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+
+// Define a route to fetch data from MongoDB
+router.get('/cart-products', async (req, res) => {
+  try {
+      // Fetch products from the MongoDB database
+      const cartproducts = await CartProduct.find();
+      // Send the products as JSON response
+      res.json(cartproducts);
+  } catch (error) {
+      // Handle errors, e.g., send an error response
+      res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 
 router.delete("/cart-products/:id", (req, res) => {
   const itemId = req.params.id;

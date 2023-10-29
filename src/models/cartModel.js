@@ -9,10 +9,6 @@ const cartSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  price_in_inr: {
-    type: Number,
-    required: true
-  },
   description: {
     type: String,
     required: true
@@ -27,7 +23,7 @@ const cartSchema = new mongoose.Schema({
   },
   quantity_unit: {
     type: String,
-    required: true
+    // required: true
   },
   category: {
     type: String,
@@ -40,5 +36,6 @@ const cartSchema = new mongoose.Schema({
 });
 
 
-const cart = mongoose.model('cart', cartSchema);
-module.exports = cart;
+const CartProduct = mongoose.model('CartProduct', cartSchema, 'cartproducts');
+
+module.exports = CartProduct;

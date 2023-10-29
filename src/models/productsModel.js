@@ -9,10 +9,6 @@ const productSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  price_in_inr: {
-    type: Number,
-    required: true
-  },
   description: {
     type: String,
     required: true
